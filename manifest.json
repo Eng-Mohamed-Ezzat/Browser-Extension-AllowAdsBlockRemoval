@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Remove Specific Classes",
+    "version": "1.0",
+    "description": "Removes HTML elements with specific class names from web pages.",
+    "permissions": ["storage"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
